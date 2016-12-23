@@ -5,7 +5,7 @@
     BuyPage=http://buy.mi.com/tw/accessories/117
 
     #小米產品名稱
-    Product='小米手環'
+    Product='小米手環 2'
 
     NoticeFile=notice.lst
 
