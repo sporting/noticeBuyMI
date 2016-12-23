@@ -13,7 +13,7 @@
     MailTo=SOMEONE@gmail.com
 
     #mail subject
-    MailSubject='[Notice]buy.mi.com'
+    MailSubject='[Notice] buy.mi.com'
 
     python noticeBuyMI.py -g "$Product" -u "$BuyPage" -o "$NoticeFile"
 
@@ -21,8 +21,8 @@
       exec < $NoticeFile
       while read line
       do
-        msg=$msg$line'\n'
+        msg=$msg$line"\n"
       done
 
-      ezSendGmail.sh $MailTo $MailSubject $msg'\n'$BuyPage
+      ezSendGmail.sh "$MailTo" "$MailSubject" "$msg"\n"$BuyPage"
     fi
