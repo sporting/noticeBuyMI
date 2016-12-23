@@ -24,5 +24,5 @@
         msg=$msg$line'\n'
       done
 
-      sm $MailTo $MailSubject $msg'\n'$BuyPage
+      ezSendGmail.sh $MailTo $MailSubject $msg'\n'$BuyPage
     fi
