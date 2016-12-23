@@ -15,7 +15,7 @@
     #mail subject
     MailSubject='[Notice]buy.mi.com'
 
-    python noticeBuyMI.py -g $Product -u $BuyPage -o $NoticeFile
+    python noticeBuyMI.py -g "$Product" -u "$BuyPage" -o "$NoticeFile"
 
     if [ -s $NoticeFile ]; then
       exec < $NoticeFile
