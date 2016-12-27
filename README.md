@@ -1,5 +1,6 @@
 # noticeBuyMI
-
+    python noticeBuyMI.py -g "小米空氣淨化器" -u http://buy.mi.com/tw/accessories/183
+    
 ## Shell script with ezSendGMail and noticeBuyMI.py to notice
     #!/bin/bash
 
@@ -16,7 +17,7 @@
     #小米空氣淨化器
     BuyPage=http://buy.mi.com/tw/accessories/183
     #小米產品名稱
-    Products=('"小米空氣淨化器 2 白色"','"小米空氣淨化器濾芯"')
+    Products=('小米空氣淨化器 2 白色','小米空氣淨化器濾芯')
 
     #for Test
     #=======================================
