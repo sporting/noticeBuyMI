@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 import argparse
 import requests
@@ -17,8 +16,8 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-CANBUY = "立即購買".encode('utf-8')
-CANNOTBUY = "暫時缺貨".encode('utf-8')
+CANBUY = "立即購買"
+CANNOTBUY = "暫時缺貨"
 
 page = requests.get(args.url)
 
@@ -32,9 +31,10 @@ try:
     # the goods want to notice
     for want in args.goods:
         # the products in this web page
+	wantuni=want.decode('utf-8')
         for product in goods:
-            if product.text.encode('utf-8').find(want) >= 0:
-                if product.text.encode('utf-8').find(CANBUY) >= 0:
+            if product.text.find(wantuni) >= 0:		
+                if product.text.find(CANBUY) >= 0:
                     wants.append(want)
 
     if len(wants) > 0:
@@ -44,8 +44,8 @@ try:
             args.output.close()
         else:
             for want in wants:
-                print ("Hurry!!! " + want + " is available now!!!")
+                print ("Hurry!!! " + want.decode('utf-8') + " is available now!!!")
 
 except Exception as err:
     parser.print_help()
-    print('ERROR!!! ' + err.message)
+    print ('ERROR!!! ' + err.message)
