@@ -58,3 +58,5 @@ Target web page: http://buy.mi.com/tw/accessories/<商品頁面>
        $mail "$MailTo" "$MailSubject" "$msg$BuyPage"
     fi
 
+## 其他通知方式
+自己實際是使用 line bot 通知
