@@ -1,4 +1,6 @@
 # noticeBuyMI
+Target web page: http://buy.mi.com/tw/accessories/<商品頁面>
+
     python noticeBuyMI.py -g "小米空氣淨化器" -u http://buy.mi.com/tw/accessories/183
     
 ## Shell script with ezSendGMail and noticeBuyMI.py to notice
